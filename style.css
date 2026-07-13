@@ -1,9 +1,15 @@
-/* RESET & BASE STYLES */
+/* ==========================================================================
+   1. RESET & BASE STYLES (Misingi Mikuu)
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,79 +18,183 @@ body {
     line-height: 1.6;
 }
 
-/* TOP BAR */
-.top-bar {
-    background-color: #002244;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container ya Kimataifa */
+.section-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 60px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.light-bg {
+    background-color: #ffffff;
+}
+
+.section-main-title {
+    text-align: center;
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.section-desc {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    color: #555;
+    font-size: 15px;
+}
+
+/* Vifungo (Buttons) */
+.btn-yellow, .btn-outline, .btn-blue, .btn-red {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-yellow {
+    background-color: #ffcc00;
+    color: #002244;
+}
+
+.btn-yellow:hover {
+    background-color: #e6b800;
+}
+
+.btn-outline {
+    background-color: transparent;
     color: white;
-    padding: 8px 15px;
+    border: 2px solid white;
+    margin-left: 10px;
+}
+
+.btn-outline:hover {
+    background-color: white;
+    color: #002244;
+}
+
+.btn-blue {
+    background-color: #003366;
+    color: white;
+}
+
+.btn-blue:hover {
+    background-color: #002244;
+}
+
+.btn-red {
+    background-color: #ff0000;
+    color: white;
+}
+
+/* ==========================================================================
+   2. TOP BAR
+   ========================================================================== */
+.top-bar {
+    background-color: #001a33;
+    color: white;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 12px;
+    font-size: 13px;
+    padding: 10px 20px;
+}
+
+.top-lang .lang-item {
+    margin-left: 15px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.top-lang .lang-item.active {
+    opacity: 1;
+    font-weight: bold;
+    color: #ffcc00;
 }
 
 .top-lang img {
     width: 16px;
     height: 12px;
     vertical-align: middle;
-    margin-right: 4px;
+    margin-right: 3px;
 }
 
-/* NAVBAR & LOGO AREA */
-.navbar {
+/* ==========================================================================
+   3. MAIN HEADER & NAVBAR
+   ========================================================================== */
+.main-header {
     background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 10px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
-.logo-area {
+.header-logo-area {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
+    gap: 15px;
 }
 
-.church-logo {
-    width: 55px;
-    height: 55px;
+.main-logo {
+    width: 65px;
+    height: 65px;
     object-fit: contain;
     border-radius: 50%;
 }
 
-.logo-text h1 {
-    font-size: 16px;
+.logo-text h2 {
+    font-size: 18px;
     color: #003366;
     font-weight: 700;
 }
 
-.logo-text p {
-    font-size: 11px;
+.motto-text {
+    font-size: 12px;
     color: #666;
     font-style: italic;
 }
 
-/* NAVIGATION MENU (Grid ya Simu) */
 .nav-menu {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    text-align: center;
-    background: #f8f9fa;
-    padding: 8px;
-    border-radius: 8px;
+    display: flex;
+    gap: 15px;
 }
 
 .nav-link {
     text-decoration: none;
-    color: #555;
-    font-size: 11px;
+    color: #444;
+    font-size: 13px;
+    font-weight: 500;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
+    transition: color 0.3s;
 }
 
 .nav-link i {
@@ -92,21 +202,19 @@ body {
     color: #003366;
 }
 
-.nav-link.active {
+.nav-link:hover, .nav-link.active {
     color: #ffcc00;
-    font-weight: bold;
 }
 
-/* HERO SECTION - Hapa ndipo hero itajaa vizuri screen yote ya juu */
+/* ==========================================================================
+   4. HERO SECTION
+   ========================================================================== */
 .hero-section {
     position: relative;
-    height: 45vh; /* Inajaza karibu nusu ya screen ya simu */
+    height: 75vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     color: white;
-    padding: 0 20px;
     overflow: hidden;
 }
 
@@ -116,101 +224,411 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 34, 68, 0.65); /* Giza la kusaidia maandishi yasomeke */
-    z-index: 1;
+    background: rgba(0, 34, 68, 0.65);
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 600px;
+    max-width: 650px;
 }
 
-.hero-content h4 {
-    font-size: 14px;
+.hero-title-small {
+    font-size: 16px;
     color: #ffcc00;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-}
-
-.hero-content h2 {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.4;
-}
-
-/* SECTIONS */
-.section-padding {
-    padding: 30px 15px;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* BISHOP CARD - Picha ya Askofu itatulia hapa */
-.bishop-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    overflow: hidden;
-    padding: 20px;
-    text-align: center;
-}
-
-.bishop-img {
-    width: 150px; /* Saizi nzuri ya duara ya picha ya Askofu */
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto 15px auto;
-    border: 3px solid #003366;
-    display: block;
-}
-
-.bishop-info h2 {
-    font-size: 20px;
-    color: #003366;
+    letter-spacing: 3px;
     margin-bottom: 5px;
 }
 
-.bishop-info h5 {
-    font-size: 14px;
-    color: #ffcc00;
-    margin-bottom: 12px;
-    text-transform: uppercase;
+.hero-title-large {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.1;
 }
 
-.bishop-info p {
-    font-size: 13px;
+.hero-description {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   5. FLOATING QUICK CARDS
+   ========================================================================== */
+.floating-cards-container {
+    max-width: 1200px;
+    margin: -60px auto 0 auto;
+    position: relative;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.f-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.f-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.f-card:hover {
+    transform: translateY(-5px);
+}
+
+.f-card-icon i {
+    font-size: 28px;
+    color: #003366;
+    margin-bottom: 12px;
+}
+
+.f-card-info h3 {
+    font-size: 15px;
+    color: #002244;
+    margin-bottom: 8px;
+}
+
+.f-card-info p {
+    font-size: 12px;
     color: #666;
+    margin-bottom: 12px;
+    height: 36px;
+    overflow: hidden;
+}
+
+.f-card-btn {
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+    background: #003366;
+    padding: 6px 12px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   6. SCRIPTURE BAR
+   ========================================================================== */
+.scripture-bar {
+    background-color: #002244;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 40px;
+}
+
+.gold-text {
+    color: #ffcc00;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   7. ABOUT & BISHOP SECTION
+   ========================================================================== */
+.additional-verse {
+    margin-top: 25px;
+    border-left: 4px solid #ffcc00;
+    padding-left: 15px;
+    font-style: italic;
+}
+
+.bishop-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.b-image-wrapper {
+    flex: 1;
+}
+
+.b-image-wrapper img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin: 0 auto;
+}
+
+.b-text-wrapper {
+    flex: 1;
+}
+
+.b-text-wrapper h2 {
+    font-size: 28px;
+    color: #003366;
+}
+
+.b-text-wrapper h3 {
+    font-size: 16px;
+    color: #ffcc00;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.b-text-wrapper p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 20px;
     text-align: justify;
 }
 
-/* GALLERY GRID */
-.gallery-grid {
+/* ==========================================================================
+   8. SCHEDULE TABLE (Ratiba ya Ibada)
+   ========================================================================== */
+.table-wrapper {
+    overflow-x: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table th {
+    background-color: #003366;
+    color: white;
+    font-weight: 600;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+.styled-table .highlight-row {
+    background-color: #fffde6;
+    font-weight: bold;
+    color: #003366;
+    border-left: 4px solid #ffcc00;
+}
+
+/* ==========================================================================
+   9. GALLERY LAYOUT
+   ========================================================================== */
+.gallery-layout {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Picha mbili mbili pembeni ya nyingine */
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-layout img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* ==========================================================================
+   10. GIVING (Matoleo)
+   ========================================================================== */
+.giving-card {
+    background: white;
+    max-width: 450px;
+    margin: 20px auto 0 auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    border-top: 4px solid #ffcc00;
+}
+
+.giving-card h3 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.giving-card p {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.bless-text {
+    margin-top: 15px !important;
+    font-style: italic;
+    color: #ffcc00;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   11. CONTACT & FOOTER
+   ========================================================================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-form-area form input, .contact-form-area form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.contact-details-area h2 {
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.contact-details-area p {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.contact-details-area p i {
+    color: #003366;
+    margin-right: 10px;
+}
+
+.main-footer {
+    background-color: #001a33;
+    color: white;
+    padding: 40px 0 20px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+}
+
+.footer-motto {
+    font-style: italic;
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.footer-social-icons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social-icons a {
+    color: white;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.footer-social-icons a:hover {
+    background: #ffcc00;
+    color: #002244;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #777;
     margin-top: 15px;
 }
 
-.gallery-grid img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+/* ==========================================================================
+   12. RESPONSIVE DESIGN (MAREKEBISHO YA SIMU YA MKONONI)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+    
+    .main-header {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .header-logo-area {
+        margin-bottom: 15px;
+    }
 
-/* ANNOUNCEMENT BAR */
-.announcement-bar {
-    background-color: #ffcc00;
-    color: #002244;
-    padding: 10px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 13px;
+    .logo-text h2 {
+        font-size: 15px;
+    }
+    
+    .nav-menu {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        width: 100%;
+        background: #f8f9fa;
+        padding: 8px;
+        border-radius: 8px;
+    }
+    
+    .nav-link {
+        font-size: 10px;
+    }
+    
+    .hero-section {
+        height: 50vh;
+    }
+    
+    .hero-title-large {
+        font-size: 32px;
+    }
+    
+    .hero-description {
+        font-size: 13px;
+    }
+    
+    .floating-cards-container {
+        margin-top: 20px;
+    }
+    
+    .f-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .f-card p {
+        height: auto;
+    }
+    
+    .bishop-layout {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .gallery-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
 }

@@ -1,0 +1,802 @@
+/* ==========================================================
+   TAG-T MASTER STYLESHEET - WITH PREMIUM ADDONS
+   ========================================================== */
+
+:root {
+    --primary-blue: #0d47a1;
+    --dark-blue: #0a3161;
+    --accent-gold: #d4af37;
+    --bright-yellow: #ffb300;
+    --emergency-red: #d32f2f;
+    --text-dark: #222;
+    --text-light: #555;
+    --bg-light: #f4f7f9;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+/* 1. EMERGENCY ANNOUNCEMENT BAR */
+.announcement-bar {
+    background-color: var(--emergency-red);
+    color: var(--white);
+    padding: 10px 5%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1001;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    animation: pulseAlert 2s infinite;
+}
+
+@keyframes pulseAlert {
+    0% { opacity: 0.95; }
+    50% { opacity: 1; }
+    100% { opacity: 0.95; }
+}
+
+.announcement-content i {
+    margin-right: 8px;
+}
+
+/* 2. TOP BAR */
+.top-bar {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    font-size: 13px;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.top-lang {
+    display: flex;
+    gap: 15px;
+}
+
+.lang-item {
+    cursor: pointer;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+}
+
+.lang-item img {
+    border-radius: 2px;
+}
+
+.lang-item.active, .lang-item:hover {
+    opacity: 1;
+    font-weight: 600;
+}
+
+/* 3. MAIN HEADER & NAVIGATION */
+.main-header {
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.header-logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.logo-text h2 {
+    color: var(--primary-blue);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.motto-text {
+    font-size: 12px;
+    color: var(--text-light);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #444;
+    font-size: 12px;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 5px 10px;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-link i {
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-blue);
+    border-bottom: 3px solid var(--bright-yellow);
+}
+
+.nav-link:hover i, .nav-link.active i {
+    color: var(--primary-blue);
+}
+
+/* 4. HERO SECTION */
+.hero-section {
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    height: 70vh;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(10, 49, 97, 0.45);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: var(--white);
+}
+
+.hero-title-small {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.hero-title-large {
+    font-size: 65px;
+    font-weight: 700;
+    color: var(--bright-yellow);
+    line-height: 1;
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-yellow {
+    background-color: var(--bright-yellow);
+    color: #111;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-yellow:hover {
+    background-color: var(--accent-gold);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 2px solid var(--white);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--dark-blue);
+    transform: translateY(-2px);
+}
+
+/* 5. FLOATING QUICK CARDS */
+.floating-cards-container {
+    max-width: 90%;
+    margin: -50px auto 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.f-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.f-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-bottom: 4px solid transparent;
+    transition: 0.3s;
+}
+
+.f-card:hover {
+    transform: translateY(-5px);
+    border-bottom: 4px solid var(--primary-blue);
+}
+
+.f-card-icon i {
+    font-size: 30px;
+    color: var(--primary-blue);
+    margin-bottom: 12px;
+}
+
+.f-card-info h3 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--dark-blue);
+}
+
+.f-card-info p {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.f-card-btn {
+    font-size: 12px;
+    color: var(--white);
+    background-color: var(--dark-blue);
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.f-card-btn:hover {
+    background-color: var(--bright-yellow);
+    color: #111;
+}
+
+/* 6. SCRIPTURE BAR */
+.scripture-bar {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 25px 5%;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.gold-text {
+    color: var(--bright-yellow);
+    font-weight: 600;
+}
+
+/* SECTIONS BASE LAYOUT */
+.section-padding {
+    padding: 60px 5%;
+}
+
+.light-bg {
+    background-color: var(--bg-light);
+}
+
+.section-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-main-title {
+    text-align: center;
+    font-size: 28px;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-main-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--bright-yellow);
+    margin: 8px auto 0 auto;
+}
+
+.section-desc {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text-light);
+}
+
+.additional-verse {
+    background: var(--bg-light);
+    padding: 15px;
+    border-left: 4px solid var(--accent-gold);
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 7. BISHOP SECTION */
+.bishop-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.b-image-wrapper img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.b-text-wrapper h2 {
+    color: var(--dark-blue);
+    font-size: 26px;
+}
+
+.b-text-wrapper h3 {
+    color: var(--accent-gold);
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.b-text-wrapper p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.btn-blue {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+/* 8. SCHEDULE TABLE */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 14px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
+}
+
+.styled-table th {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 12px 15px;
+    font-weight: 600;
+}
+
+.styled-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr.highlight-row {
+    background-color: rgba(255, 179, 0, 0.15);
+    font-weight: bold;
+    color: var(--dark-blue);
+    border-left: 4px solid var(--bright-yellow);
+}
+
+/* 9. PREMIUM AUDIO PLAYER STYLE */
+.audio-player-container {
+    background: var(--white);
+    max-width: 550px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-left: 5px solid var(--primary-blue);
+}
+
+.audio-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: left;
+}
+
+.audio-info i {
+    font-size: 24px;
+    color: var(--primary-blue);
+    background: var(--bg-light);
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.audio-text h4 {
+    font-size: 15px;
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+.audio-text p {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.play-btn {
+    background: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.play-btn:hover {
+    background: var(--bright-yellow);
+    color: #111;
+    transform: scale(1.05);
+}
+
+.progress-area {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    gap: 5px;
+}
+
+.progress-area input[type="range"] {
+    width: 100%;
+    accent-color: var(--primary-blue);
+    cursor: pointer;
+}
+
+.time-display {
+    font-size: 10px;
+    color: var(--text-light);
+    text-align: right;
+}
+
+.btn-red {
+    background-color: #e53935;
+    color: var(--white);
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-red:hover {
+    background-color: #b71c1c;
+}
+
+/* 10. GALLERY */
+.gallery-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.gallery-layout img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.gallery-layout img:hover {
+    transform: scale(1.02);
+}
+
+/* 11. GIVING CARD */
+.giving-card {
+    background: var(--white);
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.giving-card h3 {
+    color: #e53935;
+    margin-bottom: 15px;
+}
+
+.bless-text {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* 12. ADVANCED CONTACT & PRAYER REQUEST FORM */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+}
+
+.form-type-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.type-btn {
+    background: var(--bg-light);
+    color: var(--text-light);
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.type-btn.active, .type-btn:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--primary-blue);
+}
+
+.contact-form-area form input, .contact-form-area form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+}
+
+.contact-form-area form input:focus, .contact-form-area form textarea:focus {
+    border-color: var(--primary-blue);
+}
+
+.status-message {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status-message.success { color: #2e7d32; }
+.status-message.error { color: #c62828; }
+
+.contact-details-area p {
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.contact-details-area i {
+    color: var(--primary-blue);
+    margin-right: 8px;
+}
+
+/* 13. MAIN FOOTER */
+.main-footer {
+    background-color: #0b1e36;
+    color: var(--white);
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.footer-motto {
+    font-size: 13px;
+    font-style: italic;
+    opacity: 0.7;
+    margin: 8px 0 20px 0;
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.footer-social-icons a {
+    color: var(--white);
+    font-size: 18px;
+    width: 38px;
+    height: 38px;
+    background: rgba(255,255,255,0.08);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-social-icons a:hover {
+    background: var(--bright-yellow);
+    color: #111;
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+/* ==========================================================
+   RESPONSIVE DESIGN (MOBILE & TABLETS)
+   ========================================================== */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+    
+    .main-header {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .nav-link {
+        padding: 5px;
+    }
+    
+    .hero-section {
+        height: 55vh;
+    }
+    
+    .hero-title-large {
+        font-size: 42px;
+    }
+    
+    .hero-cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .floating-cards-container {
+        margin-top: 20px;
+    }
+    
+    .audio-player-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .audio-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .audio-controls {
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .progress-area {
+        width: 100%;
+    }
+    
+    .bishop-layout, .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-type-selector {
+        flex-direction: column;
+    }
+}

@@ -4,95 +4,278 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Tabernacle Assemblies of God Tanzania (TAG-T)</title>
+    
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- EMERGENCY ANNOUNCEMENT BAR (Tangazo la Wiki) -->
-    <div class="announcement-bar" id="announcementBar" style="display: none;">
-        <div class="announcement-content">
-            <i class="fas fa-bullhorn"></i> <span id="announcementText">Mkesha mkubwa wa Ijumaa hii kuanzia saa 3:00 usiku hadi asubuhi!</span>
+<!-- =========================
+1. TOP BAR (Mstari wa Juu Kabisa wenye Bendera)
+========================= -->
+<div class="top-bar">
+    <div class="top-motto">
+        <i class="fas fa-cross"></i> Karibu The Tabernacle Assemblies of God Tanzania (TAG-T)
+    </div>
+    <div class="top-lang">
+        <span class="lang-item active" id="btnSw"><img src="https://flagcdn.com/16x12/tz.png" alt="TZ"> Kiswahili</span>
+        <span class="lang-item" id="btnEn"><img src="https://flagcdn.com/16x12/gb.png" alt="UK"> English</span>
+    </div>
+</div>
+
+<!-- =========================
+2. MAIN HEADER (Logo upande mmoja, Menu yenye Icons upande mwingine)
+========================= -->
+<header class="main-header">
+    <div class="header-logo-area">
+        <img src="logo.jpg" class="main-logo" alt="TAG-T Logo">
+        <div class="logo-text">
+            <h2>THE TABERNACLE ASSEMBLIES OF GOD TANZANIA</h2>
+            <p class="motto-text">"Kanisa lisilotafuta waliopotea, limepotea lenyewe."</p>
         </div>
     </div>
-
-    <!-- TOP BAR (Mstari wa Juu wenye Bendera) -->
-    <div class="top-bar">
-        <div class="top-motto">
-            <i class="fas fa-cross"></i> <span id="topMottoText">Karibu The Tabernacle Assemblies of God Tanzania (TAG-T)</span>
-        </div>
-        <div class="top-lang">
-            <span class="lang-item active" id="btnSw"><img src="https://flagcdn.com/16x12/tz.png" alt="TZ"> Kiswahili</span>
-            <span class="lang-item" id="btnEn"><img src="https://flagcdn.com/16x12/gb.png" alt="UK"> English</span>
-        </div>
-    </div>
-
-    <!-- MAIN NAVIGATION (Menu Kuu) -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo-area">
-                <img src="logo.jpg" alt="TAG Logo" class="church-logo">
-                <div class="logo-text">
-                    <h1 id="navTitle">THE TABERNACLE</h1>
-                    <p id="navSubtitle">"Kanisa lisilotafuta waliopotea, limepotea lenyewe."</p>
-                </div>
-            </div>
-            
-            <div class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link active"><i class="fas fa-home"></i> <span id="mHome">Nyumbani</span></a>
-                <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> <span id="mAbout">Kuhusu Kanisa</span></a>
-                <a href="#leadership" class="nav-link"><i class="fas fa-users"></i> <span id="mLeaders">Viongozi</span></a>
-                <a href="#schedule" class="nav-link"><i class="fas fa-calendar-alt"></i> <span id="mSchedule">Ratiba za Ibadha</span></a>
-                <a href="#sermons" class="nav-link"><i class="fas fa-book-open"></i> <span id="mSermons">Mahubiri</span></a>
-                <a href="#gallery" class="nav-link"><i class="fas fa-images"></i> <span id="mGallery">Gallery</span></a>
-                <a href="#giving" class="nav-link"><i class="fas fa-hand-holding-usd"></i> <span id="mGiving">Matoleo</span></a>
-                <a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i> <span id="mContact">Mwasiliano</span></a>
-            </div>
-        </div>
+    
+    <nav class="nav-menu">
+        <a href="#hero" class="nav-link active"><i class="fas fa-home"></i> <span>Nyumbani</span></a>
+        <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> <span>Kuhusu Kanisa</span></a>
+        <a href="#bishop" class="nav-link"><i class="fas fa-users"></i> <span>Viongozi</span></a>
+        <a href="#schedule" class="nav-link"><i class="fas fa-calendar-alt"></i> <span>Ratiba za Ibada</span></a>
+        <a href="#sermons" class="nav-link"><i class="fas fa-book-open"></i> <span>Mahubiri</span></a>
+        <a href="#gallery" class="nav-link"><i class="fas fa-images"></i> <span>Gallery</span></a>
+        <a href="#giving" class="nav-link"><i class="fas fa-hand-holding-usd"></i> <span>Matoleo</span></a>
+        <a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i> <span>Mawasiliano</span></a>
     </nav>
+</header>
 
-    <!-- HERO SECTION (Sehemu ya Juu) -->
-    <header class="hero-section" id="home" style="background: url('hero.jpg') no-repeat center center/cover;">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h4 id="heroWelcome">KARIBU TAG-T</h4>
-            <h2 id="heroMotto">Tunamhubiri Kristo, tunafundisha Neno la Mungu na kuwafikia waliopotea kwa ajili ya Ufalme wa Mungu.</h2>
-        </div>
-    </header>
-
-    <!-- SECTION: LEADERSHIP (Viongozi) -->
-    <section class="section-padding" id="leadership">
-        <div class="container">
-            <div class="bishop-card">
-                <img src="bishop.jpg" alt="Bishop Godwin Yona" class="bishop-img">
-                <div class="bishop-info">
-                    <h2>Bishop Godwin Yona</h2>
-                    <h5 id="bishopTitle">Askofu Mkuu</h5>
-                    <p id="bishopDesc">Karibu sana The Tabernacle Assemblies of God Tanzania. Tunaamini Mungu ana mpango mzuri kwa maisha yako. Tunakuomba ujiunge nasi katika kuabudu, kujifunza Neno la Mungu na kumjua Yesu Kristo kwa undani zaidi.</p>
+<!-- =========================
+3. HERO SECTION (Picha yenye Geti/Jengo na Maandishi Makubwa)
+========================= -->
+<section id="hero" class="hero-section" style="background: url('hero.jpg') no-repeat center center/cover;">
+    <div class="hero-overlay">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title-small">KARIBU</h1>
+                <h2 class="hero-title-large">TAG-T</h2>
+                <p class="hero-description">
+                    Tunamhubiri Kristo, tunafundisha Neno la Mungu na kuwafikia waliopotea kwa ajili ya Ufalme wa Mungu.
+                </p>
+                <div class="hero-cta-buttons">
+                    <a href="#contact" class="btn-yellow"><i class="fas fa-church"></i> Karibu Kanisani</a>
+                    <a href="https://www.youtube.com/@tagtairportchurch" target="_blank" class="btn-outline"><i class="fas fa-play-circle"></i> Tazama Video</a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- SECTION: GALLERY (Picha za Matukio) -->
-    <section class="section-padding" id="gallery">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 30px; color: #003366;">Gallery / Matukio</h2>
-            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px;">
-                <img src="gallery1.jpg" alt="Event 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                <img src="gallery2.jpg" alt="Event 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                <img src="gallery3.jpg" alt="Event 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                <img src="gallery4.jpg" alt="Event 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
-                <img src="gallery5.jpg" alt="Event 5" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+<!-- =========================
+4. FLOATING QUICK CARDS (Zile kadi 5 nyeupe zinazoelea juu ya picha)
+========================= -->
+<div class="floating-cards-container">
+    <div class="f-cards-grid">
+        <div class="f-card">
+            <div class="f-card-icon"><i class="fas fa-church"></i></div>
+            <div class="f-card-info">
+                <h3>Ibada zetu</h3>
+                <p>Jiunge nasi katika ibada zetu za kila wiki.</p>
+                <a href="#schedule" class="f-card-btn">Tazama Ratiba</a>
             </div>
         </div>
-    </section>
+        <div class="f-card">
+            <div class="f-card-icon"><i class="fas fa-book-open"></i></div>
+            <div class="f-card-info">
+                <h3>Mahubiri</h3>
+                <p>Soma na sikiliza mahubiri yetu ya kuimarisha imani.</p>
+                <a href="#sermons" class="f-card-btn">Soma Zaidi</a>
+            </div>
+        </div>
+        <div class="f-card">
+            <div class="f-card-icon"><i class="fas fa-user-tie"></i></div>
+            <div class="f-card-info">
+                <h3>Viongozi</h3>
+                <p>Pata habari kuhusu viongozi wa kanisa letu.</p>
+                <a href="#bishop" class="f-card-btn">Tazama Zaidi</a>
+            </div>
+        </div>
+        <div class="f-card">
+            <div class="f-card-icon"><i class="fas fa-images"></i></div>
+            <div class="f-card-info">
+                <h3>Gallery</h3>
+                <p>Matukio mbalimbali katika picha.</p>
+                <a href="#gallery" class="f-card-btn">Tazama Picha</a>
+            </div>
+        </div>
+        <div class="f-card">
+            <div class="f-card-icon"><i class="fas fa-envelope"></i></div>
+            <div class="f-card-info">
+                <h3>Mawasiliano</h3>
+                <p>Wasiliana nasi au tupate kanisani.</p>
+                <a href="#contact" class="f-card-btn">Wasiliana Nasi</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <!-- JS File -->
-    <script src="script.js"></script>
+<!-- =========================
+5. SCRIPTURE BAR (Ule mstari wa bluu mweusi wa nukuu ya neno)
+========================= -->
+<div class="scripture-bar">
+    <p><i class="fas fa-quote-left"></i> "Nanyi mtaifahamu kweli, nayo hiyo kweli itawaweka huru." – <span class="gold-text">Yohana 8:32</span></p>
+</div>
+
+<!-- =========================
+6. ABOUT SECTION
+========================= -->
+<section id="about" class="section-padding">
+    <div class="section-container">
+        <h2 class="section-main-title">Kuhusu The Tabernacle</h2>
+        <p class="section-desc">
+            Tunafurahi kukukaribisha kwenye familia ya waamini wanaosimama katika kweli ya Neno la Mungu. Lengo letu kuu ni kuhubiri kweli ya Kristo kwa watu wote. Tunaamini katika misingi 16 ya Kipentekoste, tukijikita katika kufanya huduma za kijamii na kiroho ili kuleta mabadiliko ya kweli katika maisha ya watu.
+        </p>
+        <div class="additional-verse">
+            <h4>Isaya 2:2</h4>
+            <p>"Na itakuwa katika siku witnessed za mwisho, mlima wa nyumba ya BWANA utawekwa imara juu ya milima..."</p>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+7. VIONGOZI (BISHOP) SECTION
+========================= -->
+<section id="bishop" class="section-padding light-bg">
+    <div class="section-container bishop-layout">
+        <div class="b-image-wrapper">
+            <img src="bishop.jpg" alt="Bishop Godwin Yona">
+        </div>
+        <div class="b-text-wrapper">
+            <h2>Bishop Godwin Yona</h2>
+            <h3>Askofu Mkuu</h3>
+            <p>
+                Karibu sana The Tabernacle Assemblies of God Tanzania. Tunaamini Mungu ana mpango mzuri kwa maisha yako. Tunakuomba ujiunge nasi katika kuabudu, kujifunza Neno la Mungu na kumjua Yesu Kristo kwa undani zaidi.
+            </p>
+            <a href="#contact" class="btn-blue">Karibu Tuabudu Pamoja</a>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+8. SCHEDULE SECTION
+========================= -->
+<section id="schedule" class="section-padding">
+    <div class="section-container">
+        <h2 class="section-main-title">Ratiba ya Ibada</h2>
+        <div class="table-wrapper">
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Siku</th>
+                        <th>Ratiba ya Siku</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Jumatatu</td><td>Maombi | Saa 2:00 – 3:00 Usiku</td></tr>
+                    <tr><td>Jumanne</td><td>Maombi | Saa 2:00 – 3:00 Usiku</td></tr>
+                    <tr><td>Jumatano</td><td>Mafundisho ya Biblia | Saa 10:00 – 12:00 Jioni <br> Maombi | Saa 2:00 – 3:00 Usiku</td></tr>
+                    <tr><td>Alhamisi</td><td>Maombi | Saa 2:00 – 3:00 Usiku</td></tr>
+                    <tr><td>Ijumaa</td><td>Ibada ya Jioni | Saa 10:00 – 12:00 Jioni <br> Mkesha | Saa 3:00 – 6:00 Usiku</td></tr>
+                    <tr><td>Jumamosi</td><td>Mazoezi ya Kwaya na Maandalizi ya Ibada</td></tr>
+                    <tr class="highlight-row"><td>Jumapili</td><td>Ibada Kuu | Kuanzia Saa 2:00 Asubuhi na Kuendelea</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+9. SERMONS SECTION
+========================= -->
+<section id="sermons" class="section-padding light-bg">
+    <div class="section-container text-center">
+        <h2>Mahubiri & Vipindi</h2>
+        <p>Fuata mafundisho yetu na ibada mubashara kupitia YouTube na mitandao yetu ya kijamii.</p>
+        <a href="https://www.youtube.com/@tagtairportchurch" target="_blank" class="btn-red"><i class="fab fa-youtube"></i> Tazama YouTube</a>
+    </div>
+</section>
+
+<!-- =========================
+10. GALLERY SECTION
+========================= -->
+<section id="gallery" class="section-padding">
+    <div class="section-container">
+        <h2 class="section-main-title">Gallery</h2>
+        <div class="gallery-layout">
+            <img src="gallery1.jpg" alt="TAG-T Gallery">
+            <img src="gallery2.jpg" alt="TAG-T Gallery">
+            <img src="gallery3.jpg" alt="TAG-T Gallery">
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+11. GIVING SECTION
+========================= -->
+<section id="giving" class="section-padding light-bg">
+    <div class="section-container text-center">
+        <h2>Matoleo na Sadaka</h2>
+        <p>Unaweza kuunga mkono huduma ya Mungu na upanuzi wa ufalme wake kupitia MPESA.</p>
+        <div class="giving-card">
+            <h3><i class="fas fa-mobile-alt"></i> MPESA</h3>
+            <p><strong>Jina la Akaunti:</strong> The Tabernacle Assemblies of God Tanzania</p>
+            <p><strong>Namba:</strong> +255 725 484 632</p>
+            <p class="bless-text">Mungu akubariki kwa moyo wako wa utoaji.</p>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+12. CONTACT SECTION
+========================= -->
+<section id="contact" class="section-padding">
+    <div class="section-container contact-grid">
+        <div class="contact-form-area">
+            <h2>Wasiliana Nasi</h2>
+            <form>
+                <input type="text" placeholder="Jina Lako" required>
+                <input type="email" placeholder="Barua Pepe (Email)" required>
+                <textarea rows="5" placeholder="Andika ujumbe wako hapa..." required></textarea>
+                <button type="submit" class="btn-blue">Tuma Ujumbe</button>
+            </form>
+        </div>
+        <div class="contact-details-area">
+            <h2>Makao Makuu</h2>
+            <p><i class="fas fa-phone-alt"></i> +255 725 484 632</p>
+            <p><i class="fas fa-envelope"></i> tagtairportmedia@gmail.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> Airport, Dar es Salaam</p>
+        </div>
+    </div>
+</section>
+
+<!-- =========================
+13. MAIN FOOTER
+========================= -->
+<footer class="main-footer">
+    <div class="section-container footer-content">
+        <img src="logo.jpg" class="footer-logo" alt="TAG-T Logo">
+        <h3>The Tabernacle Assemblies of God Tanzania</h3>
+        <p class="footer-motto">"Kanisa lisilotafuta waliopotea limepotea lenyewe."</p>
+        
+        <div class="footer-social-icons">
+            <a href="https://www.facebook.com/TAGTAirportChurch" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/tagtairport_church/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.threads.net/@tagtairport_church" target="_blank"><i class="fab fa-threads"></i></a>
+            <a href="https://www.tiktok.com/@tagt.airport.chur" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@tagtairportchurch" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="copyright">© <span id="year">2026</span> The Tabernacle Assemblies of God Tanzania (TAG-T)</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
